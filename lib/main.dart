@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screens/home_screen.dart';
+import 'screens/profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,9 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      title: "Demo my git",
+      title: "Modern Profile 2024",
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: ProfileScreen(),
     );
   }
 }

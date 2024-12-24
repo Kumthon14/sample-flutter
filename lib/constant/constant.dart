@@ -8,7 +8,7 @@ const bgSecondaryColor = Color.fromARGB(255, 148, 148, 148);
 const textPrimaryColor = Colors.white;
 const textSecondaryColor = Colors.black;
 
-const iconPrimaryColor = Colors.amber;
+const iconPrimaryColor = Colors.orange;
 const iconSecondaryColor = Colors.white;
 
 final textTitle = GoogleFonts.poppins(
