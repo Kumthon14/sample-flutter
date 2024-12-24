@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'screens/home_screen.dart';
 
 void main() {
-  int d = 0;
   runApp(const MyApp());
 }
 

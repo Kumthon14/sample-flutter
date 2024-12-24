@@ -6,10 +6,34 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.amber,
+      body: ListView(
+        children: [
+          Container(
+            height: 100,
+            color: Colors.blue[400],
+            child: const Center(
+              child: Text('Test My App'),
+            ),
+          ),
+          Container(
+            height: 100,
+            color: Colors.blue[200],
+            child: const Center(
+              child: Text('Test My App'),
+            ),
+          ),
+          Container(
+            height: 100,
+            color: Colors.blue,
+            child: const Center(
+              child: Text('Test My App'),
+            ),
+          )
+        ],
+      ),
       appBar: AppBar(
-        title: const Text('หน้าหลัก'),
-        foregroundColor: Color.fromARGB(255, 255, 255, 255),
-        backgroundColor: const Color.fromARGB(235, 92, 92, 92),
+        title: const Text('Edit Profile'),
         centerTitle: true,
         leading: const Icon(Icons.arrow_back),
         actions: const [
@@ -22,9 +46,6 @@ class HomeScreen extends StatelessWidget {
             width: 10,
           )
         ],
-      ),
-      body: Container(
-        color: const Color.fromARGB(255, 185, 185, 185),
       ),
       bottomNavigationBar:
           BottomNavigationBar(items: const <BottomNavigationBarItem>[
