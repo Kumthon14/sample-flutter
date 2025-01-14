@@ -14,5 +14,17 @@ const iconSecondaryColor = Colors.white;
 final textTitle = GoogleFonts.poppins(
   fontSize: 20,
   fontWeight: FontWeight.w600,
-  color: textPrimaryColor,
+  color: textSecondaryColor,
+);
+
+final textSubTitle = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w600,
+  color: const Color.fromARGB(255, 58, 54, 54),
+);
+
+final textBtn = GoogleFonts.poppins(
+  fontSize: 19,
+  fontWeight: FontWeight.w600,
+  color: Colors.white,
 );
