@@ -36,15 +36,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }*/
   final List<String> _page_text = [
     "Home",
-    "Setting",
     "Favorite",
+    "Setting",
     "Edit Profile",
   ];
 
   final List<Widget> _pages = [
     const EditHomeScreen(),
-    const Text('Setting'),
     const Text('Favorite'),
+    const Text('Setting'),
     const EditProfileScreen(),
   ];
 
