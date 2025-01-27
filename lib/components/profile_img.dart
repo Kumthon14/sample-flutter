@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:myapp2/constant/constant.dart';
 
 class ProfileImage extends StatelessWidget {
   const ProfileImage({super.key});

@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:myapp2/components/profile_img.dart';
 import 'package:myapp2/constant/constant.dart';
 import '../components/profile_menu.dart';
-import 'package:iconly/iconly.dart';
 
-class EditProfileScreen extends StatelessWidget {
-  const EditProfileScreen({
+class EditHomeScreen extends StatelessWidget {
+  const EditHomeScreen({
     super.key,
   });
 
@@ -15,9 +14,6 @@ class EditProfileScreen extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          const SizedBox(
-            height: 20,
-          ),
           const ProfileImage(),
           const SizedBox(
             height: 20,
@@ -52,35 +48,35 @@ class EditProfileScreen extends StatelessWidget {
           ),
           const ProfileMenu(
             title: 'Setting',
-            icon: IconlyBroken.setting,
+            icon: Icons.settings,
           ),
           const SizedBox(
             height: 15,
           ),
           const ProfileMenu(
             title: 'Billing Detail',
-            icon: IconlyBroken.wallet,
+            icon: Icons.wallet,
           ),
           const SizedBox(
             height: 15,
           ),
           const ProfileMenu(
             title: 'Accessibility',
-            icon: IconlyBroken.activity,
+            icon: Icons.accessibility,
           ),
           const SizedBox(
             height: 15,
           ),
           const ProfileMenu(
             title: 'License',
-            icon: IconlyBroken.document,
+            icon: Icons.book,
           ),
           const SizedBox(
             height: 15,
           ),
           const ProfileMenu(
             title: 'Logout',
-            icon: IconlyBroken.logout,
+            icon: Icons.exit_to_app,
           ),
         ],
       ),

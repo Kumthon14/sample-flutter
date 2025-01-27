@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:myapp2/constant/constant.dart';
 import 'package:myapp2/screens/EditProfileScreen.dart';
+import 'package:myapp2/screens/EditHomeScreen.dart';
+import 'package:iconly/iconly.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -18,8 +20,29 @@ class _ProfileScreenState extends State<ProfileScreen> {
     });
   }
 
+  /*String _getAppBarTitle() {
+    switch (_selectedItem) {
+      case 0:
+        return 'Home'; // เปลี่ยนเป็นชื่อที่ต้องการสำหรับหน้าแรก
+      case 1:
+        return 'Setting';
+      case 2:
+        return 'Favorite';
+      case 3:
+        return 'Edit Profile'; // สำหรับหน้าต่าง Edit Profile
+      default:
+        return '';
+    }
+  }*/
+  final List<String> _page_text = [
+    "Home",
+    "Setting",
+    "Favorite",
+    "Edit Profile",
+  ];
+
   final List<Widget> _pages = [
-    const Text('Home'),
+    const EditHomeScreen(),
     const Text('Setting'),
     const Text('Favorite'),
     const EditProfileScreen(),
@@ -28,63 +51,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-<<<<<<< HEAD
       appBar: AppBar(
         leading:
             const Icon(Icons.arrow_back_ios, size: 20, color: iconPrimaryColor),
         title: Center(
             child: Text(
-          'Edit Profile',
+          //_getAppBarTitle(),
+          _page_text[_selectedItem],
           style: textTitle,
         )),
         actions: const [
           Icon(Icons.exit_to_app, size: 20, color: iconPrimaryColor),
-          SizedBox(width: 20),
-=======
-      body: Column(
-        children: [
-          const ProfileImage(),
-          const SizedBox(
-            height: 20,
-          ),
-          Text('Kumthon Jiamsakuntip', style: textTitle),
-          const SizedBox(
-            height: 1,
-          ),
-          Text(
-            'itznongdong@gmail.com',
-            style: textSubTitle,
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          Container(
-            width: 150,
-            height: 30,
-            decoration: BoxDecoration(
-              color: Colors.orange,
-              borderRadius: BorderRadius.circular(25.0),
-            ),
-            child: Center(
-              child: Text(
-                'Edit Profile',
-                style: textBtn,
-              ),
-            ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          const ProfileMenu(title: 'Setting',icon: Icons.settings,),
-          const SizedBox(height: 15,),
-          const ProfileMenu(title: 'Billing Detail',icon: Icons.wallet,),
-          const SizedBox(height: 15,),
-          const ProfileMenu(title: 'Accessibility',icon: Icons.accessibility,),
-          const SizedBox(height: 15,),
-          const ProfileMenu(title: 'License',icon: Icons.book,),
-          const SizedBox(height: 30,),
-          const ProfileMenu(title: 'Logout',icon: Icons.exit_to_app,),
->>>>>>> 52e69706c5d11873a3617fa89ab9dedea419eab9
+          SizedBox(width: 25),
         ],
       ),
       body: _pages[_selectedItem],
@@ -96,7 +74,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           items: [
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.home,
+                IconlyBroken.home,
                 size: 30,
                 color: iconPrimaryColor,
               ),
@@ -104,7 +82,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.favorite,
+                IconlyBroken.heart,
                 size: 30,
                 color: iconPrimaryColor,
               ),
@@ -112,7 +90,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.settings,
+                IconlyBroken.setting,
                 size: 30,
                 color: iconPrimaryColor,
               ),
@@ -120,7 +98,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.person,
+                IconlyBroken.profile,
                 size: 30,
                 color: iconPrimaryColor,
               ),
